@@ -18,7 +18,6 @@ export default class NavigationComponent extends React.Component {
     const { location } = this.props;
     const { collapsed } = this.state;
     const layoutClass = location.pathname === "/" ? "active" : "";
-    //const introClass = location.pathname.match(/^\/intro/) ? "active" : "";
     const projectClass = location.pathname.match(/^\/projects/) ? "active" : "";
     const teachingClass = location.pathname.match(/^\/teaching/) ? "active" : "";
     const involvementClass = location.pathname.match(/^\/involvement/) ? "active" : "";
@@ -43,9 +42,6 @@ export default class NavigationComponent extends React.Component {
               <li class={layoutClass}>
                 <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
               </li>
-              {/*<li class={introClass}> 
-                <Link to="intro" onClick={this.toggleCollapse.bind(this)}>Intro</Link>
-              </li> */}
               <li class={projectClass}>
                 <Link to="projects" onClick={this.toggleCollapse.bind(this)}>Projects</Link>
               </li>

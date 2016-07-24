@@ -18,8 +18,13 @@ export default class InterestsPage extends React.Component {
       return <InterestComponent key={i} {...interest}/>;
     });
 
+    const titleStyle = {
+      paddingBottom: "5%"
+    };
+
     return (
       <div>
+        <h1 style={titleStyle}>Interests</h1>
         <div class="row">{interestComponents}</div>
       </div>
     );

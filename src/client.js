@@ -15,7 +15,7 @@ const app = document.getElementById('app');
 ReactDom.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Layout}>
-			<IndexRoute component={HomePage}/>
+			<IndexRoute title="Welcome!" component={HomePage}/>
 			<Route path="projects" component={ProjectsPage}/>
 			<Route path="teaching" component={TeachingPage}/>
 			<Route path="involvement" component={InvolvementPage}/>

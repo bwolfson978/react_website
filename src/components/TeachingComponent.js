@@ -3,11 +3,22 @@ import React from "react";
 export default class TeachingComponent extends React.Component {
   render() {
     const { title } = this.props;
+    const { date } = this.props;
+    const { description } = this.props;
 
     return (
       <div class="col-md-4">
-        <h4>{title}</h4>
-        <p>teaching description</p>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">{title}</h3>
+          </div>
+          <div class="panel-body">
+            {date}
+          </div>
+          <div class="panel-body">
+            {description}
+          </div>
+        </div>
       </div>
     );
   }

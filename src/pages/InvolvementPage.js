@@ -18,8 +18,13 @@ export default class Page extends React.Component {
       return <InvolvementComponent key={i} {...involvement}/>;
     });
 
+    const titleStyle = {
+      paddingBottom: "5%"
+    };
+
     return (
       <div>
+        <h1 style={titleStyle}>Involvement</h1>
         <div class="row">{involvementComponents}</div>
       </div>
     );
