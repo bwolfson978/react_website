@@ -1,20 +1,26 @@
 import React from 'react';
 
 import SkillComponent from "../components/SkillComponent"
+import SkillStore from "../stores/SkillStore"
 
-export default class InterestsPage extends React.Component {
+export default class SkillsPage extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      skills: SkillStore.getAll(),
+    };
+  }
+
   render() {
-  	//load in from backend
-    const Skills = [
-      "Skill 1",
-      "Skill 2",
-      "Skill 3",
-      "Skill 4",
-    ].map((title, i) => <SkillComponent key={i} title={title}/> );
+    const { skills } = this.state;
+
+    const skillComponents = skills.map((skill, i) => {
+      return <SkillComponent key={i} {...skill}/>;
+    });
 
     return (
       <div>
-        <div class="row">{Skills}</div>
+        <div class="row">{skillComponents}</div>
       </div>
     );
   }

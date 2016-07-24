@@ -1,20 +1,26 @@
 import React from 'react';
 
 import ProjectComponent from "../components/ProjectComponent"
+import ProjectStore from "../stores/ProjectStore"
 
 export default class ProjectsPage extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      projects: ProjectStore.getAll(),
+    };
+  }
+
   render() {
-  	//load in from backend
-    const Projects = [
-      "Project 1",
-      "Project 2",
-      "Project 3",
-      "Project 4",
-    ].map((title, i) => <ProjectComponent key={i} title={title}/> );
+    const { projects } = this.state;
+
+    const projectComponents = projects.map((project, i) => {
+      return <ProjectComponent key={i} {...project}/>;
+    });
 
     return (
       <div>
-        <div class="row">{Projects}</div>
+        <div class="row">{projectComponents}</div>
       </div>
     );
   }

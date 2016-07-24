@@ -1,20 +1,26 @@
 import React from 'react';
 
 import InterestComponent from "../components/InterestComponent"
+import InterestStore from "../stores/InterestStore"
 
 export default class InterestsPage extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      interests: InterestStore.getAll(),
+    };
+  }
+
   render() {
-  	//load in from backend
-    const Interests = [
-      "Interest 1",
-      "Interest 2",
-      "Interest 3",
-      "Interest 4",
-    ].map((title, i) => <InterestComponent key={i} title={title}/> );
+    const { interests } = this.state;
+
+    const interestComponents = interests.map((interest, i) => {
+      return <InterestComponent key={i} {...interest}/>;
+    });
 
     return (
       <div>
-        <div class="row">{Interests}</div>
+        <div class="row">{interestComponents}</div>
       </div>
     );
   }

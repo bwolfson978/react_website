@@ -1,20 +1,26 @@
 import React from 'react';
 
 import InvolvementComponent from "../components/InvolvementComponent"
+import InvolvementStore from "../stores/InvolvementStore"
 
-export default class InterestsPage extends React.Component {
+export default class Page extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      involvements: InvolvementStore.getAll(),
+    };
+  }
+
   render() {
-  	//load in from backend
-    const Involvements = [
-      "Involvement 1",
-      "Involvement 2",
-      "Involvement 3",
-      "Involvement 4",
-    ].map((title, i) => <InvolvementComponent key={i} title={title}/> );
+    const { involvements } = this.state;
+
+    const involvementComponents = involvements.map((involvement, i) => {
+      return <InvolvementComponent key={i} {...involvement}/>;
+    });
 
     return (
       <div>
-        <div class="row">{Involvements}</div>
+        <div class="row">{involvementComponents}</div>
       </div>
     );
   }
