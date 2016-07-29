@@ -5,13 +5,21 @@ export default class InvolvementComponent extends React.Component {
     const { title } = this.props;
     const { setting } = this.props;
     const { date } = this.props;
+    const { description } = this.props;
 
     return (
       <div class="col-md-4">
-        <h4>{title}</h4>
-        <h5>{setting}</h5>
-        <h5>{date}</h5>
-        <p>description about involvement</p>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">{title}</h3>
+          </div>
+          <div class="panel-body">
+            {setting} : {date}
+          </div>
+          <div class="panel-body">
+            {description}
+          </div>
+        </div>
       </div>
     );
   }

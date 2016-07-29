@@ -7,12 +7,14 @@ class InvolvementStore extends EventEmitter {
       {
         title: "Vice President of Finance and Services",
         setting: "Interfraternity Council (IFC) of WPI",
-        date: "Spring 2016"
+        date: "Spring 2016",
+        description: ""
       },
       {
         title: "Brother of the Fraternity of Phi Gamma Delta",
         setting: "WPI",
-        date: "since 2015"
+        date: "since 2015",
+        description: ""
       },
     ];
   }

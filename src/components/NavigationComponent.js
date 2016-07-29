@@ -23,11 +23,12 @@ export default class NavigationComponent extends React.Component {
     const involvementClass = location.pathname.match(/^\/involvement/) ? "active" : "";
     const skillsClass = location.pathname.match(/^\/skills/) ? "active" : "";
     const interestsClass = location.pathname.match(/^\/interests/) ? "active" : "";
+    const visClass = location.pathname.match(/^\/vis/) ? "active" : "";
 
     const navClass = collapsed ? "collapse" : "";
 
     return (
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
@@ -57,6 +58,11 @@ export default class NavigationComponent extends React.Component {
               <li class={interestsClass}>
                 <Link to="interests" onClick={this.toggleCollapse.bind(this)}>Interests</Link>
               </li>
+              {/*
+              <li class={visClass}>
+                <Link to="vis" onClick={this.toggleCollapse.bind(this)}>Visualizations</Link>
+              </li>
+              */}
             </ul>
           </div>
         </div>

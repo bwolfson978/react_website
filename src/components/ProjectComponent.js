@@ -9,7 +9,7 @@ export default class ProjectComponent extends React.Component {
 
     return (
       <div class="col-md-4">
-        <div class="panel panel-info">
+        <div class="panel panel-warning">
           <div class="panel-heading">
             <h3 class="panel-title">{title}</h3>
           </div>
