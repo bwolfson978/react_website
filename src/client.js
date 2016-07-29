@@ -9,6 +9,7 @@ import InvolvementPage from "./pages/InvolvementPage"
 import ProjectsPage from "./pages/ProjectsPage"
 import SkillsPage from "./pages/SkillsPage"
 import TeachingPage from "./pages/TeachingPage"
+/*import VisPage from "./pages/VisPage"*/
 
 
 const app = document.getElementById('app');
@@ -21,5 +22,6 @@ ReactDom.render(
 			<Route path="involvement" component={InvolvementPage}/>
 			<Route path="skills" component={SkillsPage}/>
 			<Route path="interests" component={InterestsPage}/>
+			{/* <Route path="vis" component={VisPage}/> */}
 		</Route>
 	</Router>, app);
