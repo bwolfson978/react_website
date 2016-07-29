@@ -9,7 +9,7 @@ import InvolvementPage from "./pages/InvolvementPage"
 import ProjectsPage from "./pages/ProjectsPage"
 import SkillsPage from "./pages/SkillsPage"
 import TeachingPage from "./pages/TeachingPage"
-import VisPage from "./pages/VisPage"
+/*import VisPage from "./pages/VisPage"*/
 
 
 const app = document.getElementById('app');
