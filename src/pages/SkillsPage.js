@@ -18,8 +18,13 @@ export default class SkillsPage extends React.Component {
       return <SkillComponent key={i} {...skill}/>;
     });
 
+    const titleStyle = {
+      paddingBottom: "5%"
+    };
+
     return (
       <div>
+        <h1 style={titleStyle}>Skills</h1>
         <div class="row">{skillComponents}</div>
       </div>
     );

@@ -18,8 +18,13 @@ export default class ProjectsPage extends React.Component {
       return <ProjectComponent key={i} {...project}/>;
     });
 
+    const titleStyle = {
+      paddingBottom: "5%"
+    };
+
     return (
       <div>
+        <h1 style={titleStyle}>Projects</h1>
         <div class="row">{projectComponents}</div>
       </div>
     );

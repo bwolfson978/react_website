@@ -6,11 +6,13 @@ class SkillStore extends EventEmitter {
 		this.skills = [
 			{
 				title: "Java",
-				profLevel: 80
+				profLevel: "80%",
+				description: "java is totally cool."
 			},
 			{
 				title: "Python",
-				profLevel: 70
+				profLevel: "70%",
+				description: "python is totally well suppported."
 			},
 		];
 	}

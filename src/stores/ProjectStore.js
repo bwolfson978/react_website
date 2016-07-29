@@ -16,18 +16,18 @@ class ProjectStore extends EventEmitter {
 			},
 			{
 				title: "Python Flask API Backend",
-				setting: "Carbon Black",
-				date: "Spring 2016"
+				setting: "Carbon Black Internship #1",
+				date: "Summer 2015"
 			},
 			{
 				title: "Command Line Emulation Scripts",
-				setting: "Carbon Black",
-				date: "Spring 2016"
+				setting: "Carbon Black Internship #1",
+				date: "Summer 2015"
 			},
 			{
 				title: "Algae Biofuel Enhancement Project",
 				setting: "Great Problems Seminar: Power The World",
-				date: "Spring 2016"
+				date: "Spring 2015"
 			},
 		];
 	}
