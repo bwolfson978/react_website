@@ -14,7 +14,7 @@ export default class InvolvementComponent extends React.Component {
             <h3 class="panel-title">{title}</h3>
           </div>
           <div class="panel-body">
-            {setting} : {date}
+            {setting}, {date}
           </div>
           <div class="panel-body">
             {description}

@@ -99,8 +99,7 @@
 			_react2.default.createElement(_reactRouter.Route, { path: 'projects', component: _ProjectsPage2.default }),
 			_react2.default.createElement(_reactRouter.Route, { path: 'teaching', component: _TeachingPage2.default }),
 			_react2.default.createElement(_reactRouter.Route, { path: 'involvement', component: _InvolvementPage2.default }),
-			_react2.default.createElement(_reactRouter.Route, { path: 'skills', component: _SkillsPage2.default }),
-			_react2.default.createElement(_reactRouter.Route, { path: 'interests', component: _InterestsPage2.default })
+			_react2.default.createElement(_reactRouter.Route, { path: 'skills', component: _SkillsPage2.default })
 		)
 	), app);
 
@@ -24469,15 +24468,6 @@
 	                  { to: "skills", onClick: this.toggleCollapse.bind(this) },
 	                  "Skills"
 	                )
-	              ),
-	              _react2.default.createElement(
-	                "li",
-	                { className: interestsClass },
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: "interests", onClick: this.toggleCollapse.bind(this) },
-	                  "Interests"
-	                )
 	              )
 	            )
 	          )
@@ -24560,11 +24550,11 @@
 	          _react2.default.createElement(
 	            "p",
 	            { className: "text-muted" },
-	            "My name is Barrett Wolfson and I'm currently an undergraduate at Worcester Polytechnic Institute (WPI) majoring in Computer Science. I'm involved with a lot but everything I do boils down to three things:"
+	            "My name is Barrett Wolfson and I'm currently an undergraduate at Worcester Polytechnic Institute (WPI) majoring in Computer Science. Everything I do boils down to three things:"
 	          ),
 	          _react2.default.createElement(
 	            "h6",
-	            { className: "text-info" },
+	            { className: "text-primary" },
 	            "1. Creating"
 	          ),
 	          _react2.default.createElement(
@@ -24574,7 +24564,7 @@
 	          ),
 	          _react2.default.createElement(
 	            "h6",
-	            { className: "text-info" },
+	            { className: "text-primary" },
 	            "2. Improving"
 	          ),
 	          _react2.default.createElement(
@@ -24584,7 +24574,7 @@
 	          ),
 	          _react2.default.createElement(
 	            "h6",
-	            { className: "text-info" },
+	            { className: "text-primary" },
 	            "3. Giving Back"
 	          ),
 	          _react2.default.createElement(
@@ -25171,7 +25161,8 @@
 	      });
 	
 	      var titleStyle = {
-	        paddingBottom: "5%"
+	        paddingBottom: "5%",
+	        textAlign: "center"
 	      };
 	
 	      return _react2.default.createElement(
@@ -25258,7 +25249,7 @@
 	            "div",
 	            { className: "panel-body" },
 	            setting,
-	            " : ",
+	            ", ",
 	            date
 	          ),
 	          _react2.default.createElement(
@@ -25305,15 +25296,15 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(InvolvementStore).call(this));
 	
 	    _this.involvements = [{
-	      title: "Vice President of Finance and Services",
-	      setting: "Interfraternity Council (IFC) of WPI",
-	      date: "Spring 2016",
-	      description: ""
+	      title: "Interfraternity Council",
+	      setting: "WPI",
+	      date: "Spring 2016 - present",
+	      description: "One of the extremely cool things about Greek life at WPI is we are self-governing. The interfraternity council is the organization that resides over all of the 13 different fraternities on campus, generally deciding the direction to move Greek life towards. I have been involved with IFC since last December, serving as the treasurer and a member of the executive board. It's been an awesome experience working alongside the administration with some of the best students in the Greek community."
 	    }, {
 	      title: "Brother of the Fraternity of Phi Gamma Delta",
 	      setting: "WPI",
-	      date: "since 2015",
-	      description: ""
+	      date: "2015 - present",
+	      description: "Deciding to join Greek life was definitely one of the best decisions I made in my first year of college. I've become extremely passionate about alumni relations after seeing how one organization can transcend and connect multiple generations. In the past two years, I've held three positions within our fraternity: webmaster, awards chair, and executive recording secretary."
 	    }];
 	    return _this;
 	  }
@@ -25392,6 +25383,14 @@
 	      });
 	
 	      var titleStyle = {
+	        paddingBottom: "5%",
+	        textAlign: "center"
+	      };
+	
+	      var imgStyle = {
+	        display: "block",
+	        marginLeft: "auto",
+	        marginRight: "auto",
 	        paddingBottom: "5%"
 	      };
 	
@@ -25403,6 +25402,7 @@
 	          { style: titleStyle },
 	          "Projects"
 	        ),
+	        _react2.default.createElement("img", { src: "src/images/thinker.jpg", style: imgStyle, className: "img-rounded" }),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "row" },
@@ -25458,37 +25458,150 @@
 	      var setting = this.props.setting;
 	      var date = this.props.date;
 	      var description = this.props.description;
+	      var link = this.props.link;
 	
 	
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "col-md-4" },
-	        _react2.default.createElement(
+	      if (link == "" && title != "Algae Biofuel Enhancement Project") {
+	        return _react2.default.createElement(
 	          "div",
-	          { className: "panel panel-warning" },
+	          { className: "col-md-4" },
 	          _react2.default.createElement(
 	            "div",
-	            { className: "panel-heading" },
+	            { className: "panel panel-warning" },
 	            _react2.default.createElement(
-	              "h3",
-	              { className: "panel-title" },
-	              title
+	              "div",
+	              { className: "panel-heading" },
+	              _react2.default.createElement(
+	                "h3",
+	                { className: "panel-title" },
+	                title
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-body" },
+	              setting,
+	              ", ",
+	              date
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-body" },
+	              description
 	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "panel-body" },
-	            setting,
-	            " : ",
-	            date
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "panel-body" },
-	            description
 	          )
-	        )
-	      );
+	        );
+	      } else if (title == "React.js Website") {
+	        return _react2.default.createElement(
+	          "div",
+	          { className: "col-md-4" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "panel panel-warning" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-heading" },
+	              _react2.default.createElement(
+	                "h3",
+	                { className: "panel-title" },
+	                title
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-body" },
+	              setting,
+	              ", ",
+	              date
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-body" },
+	              description
+	            ),
+	            _react2.default.createElement(
+	              "span",
+	              null,
+	              _react2.default.createElement(
+	                "a",
+	                { href: link, className: "btn btn-link" },
+	                "Link"
+	              ),
+	              "-You're already here!"
+	            )
+	          )
+	        );
+	      } else if (title == "Algae Biofuel Enhancement Project") {
+	        return _react2.default.createElement(
+	          "div",
+	          { className: "col-md-4" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "panel panel-warning" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-heading" },
+	              _react2.default.createElement(
+	                "h3",
+	                { className: "panel-title" },
+	                title
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-body" },
+	              setting,
+	              ", ",
+	              date
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-body" },
+	              description,
+	              _react2.default.createElement(
+	                "h6",
+	                null,
+	                "Poster Presentation Day Judge's Winner!"
+	              )
+	            )
+	          )
+	        );
+	      } else {
+	        return _react2.default.createElement(
+	          "div",
+	          { className: "col-md-4" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "panel panel-warning" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-heading" },
+	              _react2.default.createElement(
+	                "h3",
+	                { className: "panel-title" },
+	                title
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-body" },
+	              setting,
+	              ", ",
+	              date
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "panel-body" },
+	              description
+	            ),
+	            _react2.default.createElement(
+	              "a",
+	              { href: link, className: "btn btn-link" },
+	              "Link"
+	            )
+	          )
+	        );
+	      }
 	    }
 	  }]);
 	
@@ -25529,42 +25642,50 @@
 				title: "Vulnerability Visualization",
 				setting: "WPI",
 				date: "Fall 2016",
-				description: ""
+				description: "This project is my Major Qualifying Project (MQP) or capstone project at WPI. I'm currently working with two other WPI students under the guidance of professor Lane Harrison to extend the capabilities of the Nessus Vulnerability Visualization. Our goal is to create a visualization that can help security professionals quickly gain insight into the outputs of their network vulnerability scans and allow them to react accordingly with patches.",
+				link: "https://github.com/wpivis/nv"
 			}, {
-				title: "This Website",
-				setting: "personal project",
+				title: "React.js Website",
+				setting: "Free time",
 				date: "Summer 2016",
-				description: ""
+				description: "I constructed this website as a way to begin to learn the react.js framework during some free time in the summer. A potential direction of the MQP is porting the project from the backbone.js framework to either react.js or angular.js. This website uses webpack, babel es6, as well as react to quickly and dynamically load content.",
+				link: "https://bwolfson978.github.io/react_website"
 			}, {
 				title: "KabaSuji Board Game Application",
 				setting: "CS-3733: Software Engineering",
 				date: "Spring 2016",
-				description: ""
+				description: "I worked on this project with a team of four other students while enrolled in CS3733 (Software Engineering) at WPI. The final application is a classic board game called KabaSuji. The first half of the course was spent designing our project with use cases, mock-up GUIs, and UML class diagrams with object-oriented design principles. The latter half of the course was spent building and testing the application using Java.",
+				link: "https://github.com/eriksola/Achilles"
 			}, {
 				title: "Deuces Solitaire Version Application",
 				setting: "CS-3733: Software Engineering",
 				date: "Spring 2016",
-				description: ""
-			}, {
-				title: "Python Flask API Backend",
-				setting: "Carbon Black Internship #1",
-				date: "Summer 2015",
-				description: ""
+				description: "Tnhis project was completed individually in CS3733 (Software Engineering) and gave students a chance to practice extending an existing framework of code (generic Solitaire provided by Professor) to create something new.",
+				link: "https://github.com/bwolfson978/Deuces"
 			}, {
 				title: "Command Line Emulation Scripts",
-				setting: "Carbon Black Internship #1",
+				setting: "Carbon Black Internship",
 				date: "Summer 2015",
-				description: ""
+				description: "The main project I worked on during my first summer at Carbon Black was contributing to their open source Developer Network API which helps users compare threat intelligence data.",
+				link: "https://github.com/carbonblack/cbapi-python"
+			}, {
+				title: "Python Flask API Backend",
+				setting: "Carbon Black Internship",
+				date: "Summer 2015",
+				description: "Another project I was able to work on during my first summer at Carbon Black was a proof-of-concept back-end for a new CB feature called 'Detonation'. I used the Python Flask microframework to design and implement it. This project gave me a solid introduction into web development, RESTful APIs, and HTTP requests relatively quickly. ",
+				link: ""
 			}, {
 				title: "Algae Biofuel Enhancement Project",
 				setting: "Great Problems Seminar: Power The World",
 				date: "Spring 2015",
-				description: ""
+				description: "During this seminar, a group of three other WPI students and myself researched various types of renewable energy sources and became very interested with the idea of using algae as a biofuel. Over the course of seven weeks we looked into every different type of open and closed photobioreactor and designed a scale to accurately assess the effectiveness of the system. The scale was intended to help companies compare and improve their systems to drive positive growth with respect to the world's energy crisis.",
+				link: ""
 			}, {
 				title: "New Model for Obsessive Compulsive Disorder in Mice",
 				setting: "Tufts Medical School",
 				date: "Summer 2013",
-				description: ""
+				description: "As a summer intern in the Dept. of Integrative Physiology at Tufts Medical, I worked alongside a team of Northeastern co-op students under the guidance of Professor Emeritus Louis Shuster to a new mouse model to observe the effects of drugs designed to treat Obsessive Compulsive Disorder. The model included measuring moved grain pellets in the mouse's cage, as well as tendency to bury marbles, which mice find intimidating.",
+				link: ""
 			}];
 			return _this;
 		}
@@ -25643,6 +25764,14 @@
 	      });
 	
 	      var titleStyle = {
+	        paddingBottom: "5%",
+	        textAlign: "center"
+	      };
+	
+	      var imgStyle = {
+	        display: "block",
+	        marginLeft: "auto",
+	        marginRight: "auto",
 	        paddingBottom: "5%"
 	      };
 	
@@ -25653,6 +25782,17 @@
 	          "h1",
 	          { style: titleStyle },
 	          "Skills"
+	        ),
+	        _react2.default.createElement("img", { src: "src/images/coding.jpg", style: imgStyle, className: "img-rounded" }),
+	        _react2.default.createElement(
+	          "p",
+	          { style: titleStyle },
+	          _react2.default.createElement(
+	            "i",
+	            null,
+	            "\"Everybody in this country should learn how to program a computer... because it teaches you how to think.\""
+	          ),
+	          " - Steve Jobs"
 	        ),
 	        _react2.default.createElement(
 	          "div",
@@ -25707,30 +25847,31 @@
 	    value: function render() {
 	      var title = this.props.title;
 	      var profLevel = this.props.profLevel;
-	      var description = this.props.description;
+	      var color = this.props.color;
 	
 	
-	      var style = {
+	      var barStyle = {
 	        width: profLevel
 	      };
 	
+	      var compStyle = {
+	        paddingBottom: "2%"
+	      };
+	
+	      var progressBar = "progress-bar " + color;
+	
 	      return _react2.default.createElement(
 	        "div",
-	        { className: "col-md-4" },
+	        { className: "col-md-4", style: compStyle },
 	        _react2.default.createElement(
-	          "h4",
+	          "h6",
 	          null,
 	          title
 	        ),
 	        _react2.default.createElement(
-	          "p",
-	          null,
-	          description
-	        ),
-	        _react2.default.createElement(
 	          "div",
 	          { className: "progress" },
-	          _react2.default.createElement("div", { className: "progress-bar progress-bar-info", style: style })
+	          _react2.default.createElement("div", { className: progressBar, style: barStyle })
 	        )
 	      );
 	    }
@@ -25772,11 +25913,39 @@
 			_this.skills = [{
 				title: "Java",
 				profLevel: "80%",
-				description: "java is totally cool."
+				color: "progress-bar-success"
 			}, {
 				title: "Python",
+				profLevel: "80%",
+				color: ""
+			}, {
+				title: "C",
+				profLevel: "65%",
+				color: "progress-bar-success"
+			}, {
+				title: "HTML/CSS",
+				profLevel: "85%",
+				color: ""
+			}, {
+				title: "Javascript",
+				profLevel: "60%",
+				color: "progress-bar-success"
+			}, {
+				title: "Linux/UNIX systems",
+				profLevel: "55%",
+				color: ""
+			}, {
+				title: "Object-Oriented Design",
+				profLevel: "75%",
+				color: "progress-bar-success"
+			}, {
+				title: "Public Speaking, Presenting, and Writing",
 				profLevel: "70%",
-				description: "python is totally well suppported."
+				color: ""
+			}, {
+				title: "Learning independently and quickly",
+				profLevel: "90%",
+				color: "progress-bar-success"
 			}];
 			return _this;
 		}
@@ -25855,6 +26024,14 @@
 	      });
 	
 	      var titleStyle = {
+	        paddingBottom: "5%",
+	        textAlign: "center"
+	      };
+	
+	      var imgStyle = {
+	        display: "block",
+	        marginLeft: "auto",
+	        marginRight: "auto",
 	        paddingBottom: "5%"
 	      };
 	
@@ -25865,6 +26042,17 @@
 	          "h1",
 	          { style: titleStyle },
 	          "Teaching"
+	        ),
+	        _react2.default.createElement("img", { src: "src/images/teaching.jpg", style: imgStyle, className: "img-rounded" }),
+	        _react2.default.createElement(
+	          "p",
+	          { style: titleStyle },
+	          _react2.default.createElement(
+	            "i",
+	            null,
+	            "\"The best way to learn is to teach.\""
+	          ),
+	          " - from the Latin principle Docendo Discimus"
 	        ),
 	        _react2.default.createElement(
 	          "div",
@@ -25937,6 +26125,7 @@
 	    key: "render",
 	    value: function render() {
 	      var title = this.props.title;
+	      var setting = this.props.setting;
 	      var date = this.props.date;
 	      var description = this.props.description;
 	
@@ -25959,6 +26148,8 @@
 	          _react2.default.createElement(
 	            "div",
 	            { className: "panel-body" },
+	            setting,
+	            ", ",
 	            date
 	          ),
 	          _react2.default.createElement(
@@ -26006,16 +26197,18 @@
 	
 			_this.teachingEndeavors = [{
 				title: "Peer Learning Assistant (PLA) for Mathematical Sciences Department",
+				setting: "Calculus 2 and Calculus 4",
 				date: "Fall 2016",
-				description: ""
+				description: "During my fall semester of sophomore year at WPI, I served as a PLA (similar to a Teaching Assistant) for Calculus 2 (in quarter 1) and Calculus 4 (in quarter 2). I graded student homework submissions, held office hours, and prepared and taught a one hour conference each week for roughly 30 students."
 			}, {
-				title: "Grading Assistant for CS2102: Object-Oriented Design Concepts",
+				title: "Grading Assistant for Computer Science Department",
+				setting: "Object-Oriented Design Concepts",
 				date: "Spring 2015",
-				description: ""
-			}, {
+				description: "During the spring of my freshmen year at WPI, I served as a grading assistant for CS2102 which I had previously taken in the fall and truly enjoyed. Seeing and grading hundreds of student homework submissions not only reinforced the concepts I had been exposed to in the fall, but also proved to me how differently the same problem can be approached and solved by different people." }, {
 				title: "High School Tutor (private and school volunteer)",
+				setting: "Academic Support Center and private homes",
 				date: "Fall 2013 - Spring 2014",
-				description: ""
+				description: "The Academic Support Center in my high school was where I first found a passion for teaching. I helped students in all subject areas but focused on math, physics, and chemistry. Additionally, I tutored four students individually outside of school. Both of these experiences made it clear to me that the best way to learn is to teach."
 			}];
 			return _this;
 		}

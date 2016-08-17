@@ -4,18 +4,23 @@ export default class SkillComponent extends React.Component {
   render() {
     const { title } = this.props;
     const { profLevel } = this.props;
-    const { description } = this.props;
+    const { color } = this.props;
 
-    var style = {
-      width: profLevel
+    var barStyle = {
+      width: profLevel,
     };
 
+    var compStyle = {
+      paddingBottom: "2%"
+    }
+
+    var progressBar = "progress-bar " + color;
+
     return (
-      <div class="col-md-4">
-        <h4>{title}</h4>
-        <p>{description}</p>
+      <div class="col-md-4" style={compStyle}>
+        <h6>{title}</h6>
         <div class="progress">
-          <div class="progress-bar progress-bar-info" style={style}></div>
+          <div class={progressBar} style={barStyle}></div>
         </div>
       </div>
     );

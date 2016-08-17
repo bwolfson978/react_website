@@ -19,7 +19,8 @@ export default class Page extends React.Component {
     });
 
     const titleStyle = {
-      paddingBottom: "5%"
+      paddingBottom: "5%",
+      textAlign: "center"
     };
 
     return (

@@ -19,12 +19,21 @@ export default class ProjectsPage extends React.Component {
     });
 
     const titleStyle = {
+      paddingBottom: "5%",
+      textAlign: "center"
+    };
+
+    const imgStyle = {
+      display: "block",
+      marginLeft: "auto",
+      marginRight: "auto",
       paddingBottom: "5%"
     };
 
     return (
       <div>
         <h1 style={titleStyle}>Projects</h1>
+        <img src="src/images/thinker.jpg" style={imgStyle} class="img-rounded"/>
         <div class="row">{projectComponents}</div>
       </div>
     );

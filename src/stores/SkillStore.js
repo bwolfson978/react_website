@@ -7,13 +7,48 @@ class SkillStore extends EventEmitter {
 			{
 				title: "Java",
 				profLevel: "80%",
-				description: "java is totally cool."
+				color: "progress-bar-success"
 			},
 			{
 				title: "Python",
-				profLevel: "70%",
-				description: "python is totally well suppported."
+				profLevel: "80%",
+				color: ""
 			},
+			{
+				title: "C",
+				profLevel: "65%",
+				color: "progress-bar-success"
+			},
+			{
+				title: "HTML/CSS",
+				profLevel: "85%",
+				color: ""
+			},
+			{
+				title: "Javascript",
+				profLevel: "60%",
+				color: "progress-bar-success"
+			},
+			{
+				title: "Linux/UNIX systems",
+				profLevel: "55%",
+				color: ""
+			},
+			{
+				title: "Object-Oriented Design",
+				profLevel: "75%",
+				color: "progress-bar-success"
+			},
+			{
+				title: "Public Speaking, Presenting, and Writing",
+				profLevel: "70%",
+				color: ""
+			},
+			{
+				title: "Learning independently and quickly",
+				profLevel: "90%",
+				color: "progress-bar-success"
+			}
 		];
 	}
 

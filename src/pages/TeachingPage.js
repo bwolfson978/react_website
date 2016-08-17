@@ -19,12 +19,22 @@ export default class TeachingPage extends React.Component {
     });
 
     const titleStyle = {
+      paddingBottom: "5%",
+      textAlign: "center"
+    };
+
+    const imgStyle = {
+      display: "block",
+      marginLeft: "auto",
+      marginRight: "auto",
       paddingBottom: "5%"
     };
 
     return (
       <div>
         <h1 style={titleStyle}>Teaching</h1>
+        <img src="src/images/teaching.jpg" style={imgStyle} class="img-rounded"/>
+        <p style={titleStyle}><i>"The best way to learn is to teach."</i> - from the Latin principle Docendo Discimus</p>
         <div class="row">{teachingComponents}</div>
         <blockquote>
           <p>...Barry impressed me with his maturity and responsible attitude. He arrived prepared, often reviewing material before they met, and he kept my daughter on task. With his help her grades improved dramatically...</p>

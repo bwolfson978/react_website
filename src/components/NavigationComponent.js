@@ -55,9 +55,11 @@ export default class NavigationComponent extends React.Component {
               <li class={skillsClass}>
                 <Link to="skills" onClick={this.toggleCollapse.bind(this)}>Skills</Link>
               </li>
+              {/*
               <li class={interestsClass}>
                 <Link to="interests" onClick={this.toggleCollapse.bind(this)}>Interests</Link>
               </li>
+            */}
               {/*
               <li class={visClass}>
                 <Link to="vis" onClick={this.toggleCollapse.bind(this)}>Visualizations</Link>
