@@ -24,6 +24,7 @@ export default class NavigationComponent extends React.Component {
     const skillsClass = location.pathname.match(/^\/skills/) ? "active" : "";
     const interestsClass = location.pathname.match(/^\/interests/) ? "active" : "";
     const visClass = location.pathname.match(/^\/vis/) ? "active" : "";
+    const contactClass = location.pathname.match(/^\/contact/) ? "active" : "";
 
     const navClass = collapsed ? "collapse" : "";
 
@@ -65,6 +66,9 @@ export default class NavigationComponent extends React.Component {
                 <Link to="vis" onClick={this.toggleCollapse.bind(this)}>Visualizations</Link>
               </li>
               */}
+              <li class={contactClass}>
+                <Link to="contact" onClick={this.toggleCollapse.bind(this)}>Contact</Link>
+              </li>
             </ul>
           </div>
         </div>
