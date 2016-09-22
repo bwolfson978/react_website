@@ -17,7 +17,7 @@ export default class HomePage extends React.Component {
     return (
       <div>
         <h1 style={titleStyle}>Welcome!</h1>
-      	<img src="src/images/barry.jpg" style={imgStyle} class="img-circle"/>
+      	<img src="src/images/barry2.jpg" style={imgStyle} class="img-circle"/>
         <div>
         <h4 class="text-primary" style={titleStyle}>Thank you very much for visiting my website.</h4>
         <p class="text-muted">My name is Barrett Wolfson and I'm currently an undergraduate at Worcester
