@@ -3,7 +3,7 @@ import React from 'react';
 import InvolvementComponent from "../components/InvolvementComponent"
 import InvolvementStore from "../stores/InvolvementStore"
 
-export default class Page extends React.Component {
+export default class InvolvementPage extends React.Component {
   constructor() {
     super();
     this.state = {
