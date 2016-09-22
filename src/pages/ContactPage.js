@@ -1,6 +1,3 @@
-/**
- * Created by Barrett on 9/21/2016.
- */
 import React from 'react';
 
 export default class ContactPage extends React.Component {
@@ -9,11 +6,6 @@ export default class ContactPage extends React.Component {
     }
 
     render() {
-        const { involvements } = this.state;
-
-        const involvementComponents = involvements.map((involvement, i) => {
-                return <InvolvementComponent key={i} {...involvement}/>;
-        });
 
         const titleStyle = {
             paddingBottom: "5%",

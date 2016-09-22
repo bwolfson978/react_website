@@ -22,8 +22,9 @@ ReactDom.render(
 			<Route path="teaching" component={TeachingPage}/>
 			<Route path="involvement" component={InvolvementPage}/>
 			<Route path="skills" component={SkillsPage}/>
+			<Route path="contact" component={ContactPage}/>
 			{/* <Route path="interests" component={InterestsPage}/> */}
 			{/* <Route path="vis" component={VisPage}/> */}
-			<Route path="contact" component={ContactPage}/>
+
 		</Route>
 	</Router>, app);
