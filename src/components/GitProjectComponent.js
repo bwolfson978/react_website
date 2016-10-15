@@ -15,7 +15,6 @@ export default class GitProjectComponent extends React.Component {
             this.setState({
                 repos: response.body
             })
-            console.log(response);
         })
     }
 
