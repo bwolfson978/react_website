@@ -66,9 +66,8 @@ class ProjectStore extends EventEmitter {
 	getAll() {
 		return this.projects;
 	}
-
 }
 
 const projectStore = new ProjectStore;
 
-export default projectStore
+export default projectStore;

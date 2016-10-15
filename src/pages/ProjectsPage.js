@@ -1,11 +1,11 @@
 import React from 'react';
-
+import GitProjectComponent from "../components/GitProjectComponent"
 import ProjectComponent from "../components/ProjectComponent"
 import ProjectStore from "../stores/ProjectStore"
 
 export default class ProjectsPage extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       projects: ProjectStore.getAll(),
     };
@@ -35,6 +35,8 @@ export default class ProjectsPage extends React.Component {
         <h1 style={titleStyle}>Projects</h1>
         <img src="src/images/thinker.jpg" style={imgStyle} class="img-rounded"/>
         <div class="row">{projectComponents}</div>
+        <h3 style={titleStyle}>GitHub Repos drawn in using GitHub API</h3>
+        <GitProjectComponent/>
       </div>
     );
   }
