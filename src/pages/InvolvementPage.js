@@ -28,7 +28,7 @@ export default class InvolvementPage extends React.Component {
 
     return (
       <div>
-        <h1 style={titleStyle}>Involvement</h1>
+        <h1 class = "title-style">Involvement</h1>
         <div class="row">{involvementComponents}</div>
       </div>
     );

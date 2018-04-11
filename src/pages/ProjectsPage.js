@@ -46,7 +46,7 @@ export default class ProjectsPage extends React.Component {
       </div>
       */
         <div>
-            <h1 style={titleStyle}>Projects</h1>
+            <h1 class="title-style">Projects</h1>
             <img src="src/images/thinker.jpg" style={imgStyle} class="img-rounded"/>
             <div class="row">{projectComponents}</div>
         </div>
