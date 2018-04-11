@@ -18,10 +18,20 @@ export default class SkillsPage extends React.Component {
       return <SkillComponent key={i} {...skill}/>;
     });
 
-    const titleStyle = {
-      paddingBottom: "5%",
-      textAlign: "center"
-    };
+      const titleStyle = {
+          paddingBottom: "2%",
+          textAlign: "center",
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "700",
+          fontSize: "3.0rem"
+      };
+      const quoteStyle = {
+          paddingBottom: "2%",
+          textAlign: "center",
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "700",
+          fontSize: "2.0rem"
+      };
 
     const imgStyle = {
       display: "block",
@@ -34,7 +44,7 @@ export default class SkillsPage extends React.Component {
       <div>
         <h1 style={titleStyle}>Skills</h1>
         <img src="src/images/coding.jpg" style={imgStyle} class="img-rounded"/>
-        <p style={titleStyle}><i>"Everybody in this country should learn how to program a computer... because it teaches you how to think."</i> - Steve Jobs</p>
+        <p style={quoteStyle}><i>"Everybody in this country should learn how to program a computer... because it teaches you how to think."</i> - Steve Jobs</p>
         <div class="row">{skillComponents}</div>
       </div>
     );

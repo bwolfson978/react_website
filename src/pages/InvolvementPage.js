@@ -18,10 +18,13 @@ export default class InvolvementPage extends React.Component {
       return <InvolvementComponent key={i} {...involvement}/>;
     });
 
-    const titleStyle = {
-      paddingBottom: "5%",
-      textAlign: "center"
-    };
+      const titleStyle = {
+          paddingBottom: "2%",
+          textAlign: "center",
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "700",
+          fontSize: "3.0rem"
+      };
 
     return (
       <div>

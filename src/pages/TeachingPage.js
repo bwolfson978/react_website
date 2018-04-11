@@ -18,10 +18,20 @@ export default class TeachingPage extends React.Component {
       return <TeachingComponent key={i} {...teach}/>;
     });
 
-    const titleStyle = {
-      paddingBottom: "5%",
-      textAlign: "center"
-    };
+      const titleStyle = {
+          paddingBottom: "2%",
+          textAlign: "center",
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "700",
+          fontSize: "3.0rem"
+      };
+      const quoteStyle = {
+          paddingBottom: "2%",
+          textAlign: "center",
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "700",
+          fontSize: "2.5rem"
+      };
 
     const imgStyle = {
       display: "block",
@@ -34,7 +44,7 @@ export default class TeachingPage extends React.Component {
       <div>
         <h1 style={titleStyle}>Teaching</h1>
         <img src="src/images/teaching.jpg" style={imgStyle} class="img-rounded"/>
-        <p style={titleStyle}><i>"The best way to learn is to teach."</i> - from the Latin principle Docendo Discimus</p>
+        <p style={quoteStyle}><i>"The best way to learn is to teach."</i> - from the Latin principle Docendo Discimus</p>
         <div class="row">{teachingComponents}</div>
         <blockquote>
           <p>...Barry impressed me with his maturity and responsible attitude. He arrived prepared, often reviewing material before they met, and he kept my daughter on task. With his help her grades improved dramatically...</p>

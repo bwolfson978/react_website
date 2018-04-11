@@ -2,6 +2,18 @@ import React from "react";
 
 export default class ProjectComponent extends React.Component {
   render() {
+
+      const headerStyle = {
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "700",
+          fontSize: "2.0rem"
+      };
+
+      const paragraphStyle = {
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "400",
+          fontSize: "2.0rem"
+      };
     const { title } = this.props;
     const { setting } = this.props;
     const { date } = this.props;
@@ -18,8 +30,8 @@ export default class ProjectComponent extends React.Component {
             <div class="panel-body">
               {setting}, {date}
             </div>
-            <div class="panel-body">
-              {description}
+            <div class="panel-body" style={paragraphStyle}>
+                {description}
             </div>
           </div>
         </div>
@@ -43,7 +55,7 @@ export default class ProjectComponent extends React.Component {
         </div>
       );
     }
-    else if (title == "Algae Biofuel Enhancement Project"){
+    else if (title == "Launching a Service Marketplace Startup"){
       return (
         <div class="col-md-4">
           <div class="panel panel-warning">
@@ -55,7 +67,6 @@ export default class ProjectComponent extends React.Component {
             </div>
             <div class="panel-body">
               {description}
-              <h6>Poster Presentation Day Judge's Winner!</h6>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ class SkillStore extends EventEmitter {
 			{
 				title: "Python",
 				profLevel: "80%",
-				color: ""
+				color: "progress-bar-success"
 			},
 			{
 				title: "C",
@@ -22,7 +22,7 @@ class SkillStore extends EventEmitter {
 			{
 				title: "HTML/CSS",
 				profLevel: "85%",
-				color: ""
+				color: "progress-bar-success"
 			},
 			{
 				title: "Javascript",
@@ -32,7 +32,7 @@ class SkillStore extends EventEmitter {
 			{
 				title: "Linux/UNIX systems",
 				profLevel: "55%",
-				color: ""
+				color: "progress-bar-success"
 			},
 			{
 				title: "Object-Oriented Design",
@@ -42,10 +42,10 @@ class SkillStore extends EventEmitter {
 			{
 				title: "Public Speaking, Presenting, and Writing",
 				profLevel: "70%",
-				color: ""
+				color: "progress-bar-success"
 			},
 			{
-				title: "Learning independently and quickly",
+				title: "Learning Independently and Quickly",
 				profLevel: "90%",
 				color: "progress-bar-success"
 			}

@@ -14,11 +14,17 @@ export default class SkillComponent extends React.Component {
       paddingBottom: "2%"
     }
 
+      const skillStyle = {
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "400",
+          fontSize: "1.8rem"
+      };
+
     var progressBar = "progress-bar " + color;
 
     return (
       <div class="col-md-4" style={compStyle}>
-        <h6>{title}</h6>
+        <h6 style={skillStyle}>{title}</h6>
         <div class="progress">
           <div class={progressBar} style={barStyle}></div>
         </div>

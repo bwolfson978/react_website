@@ -18,10 +18,13 @@ export default class ProjectsPage extends React.Component {
       return <ProjectComponent key={i} {...project}/>;
     });
 
-    const titleStyle = {
-      paddingBottom: "5%",
-      textAlign: "center"
-    };
+      const titleStyle = {
+          paddingBottom: "2%",
+          textAlign: "center",
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: "700",
+          fontSize: "3.0rem"
+      };
 
     const imgStyle = {
       display: "block",
@@ -30,7 +33,10 @@ export default class ProjectsPage extends React.Component {
       paddingBottom: "5%"
     };
 
+
+
     return (
+        /*
       <div>
         <h1 style={titleStyle}>Projects</h1>
         <img src="src/images/thinker.jpg" style={imgStyle} class="img-rounded"/>
@@ -38,6 +44,12 @@ export default class ProjectsPage extends React.Component {
         <h3 style={titleStyle}>GitHub Repos drawn in using GitHub API</h3>
         <GitProjectComponent/>
       </div>
+      */
+        <div>
+            <h1 style={titleStyle}>Projects</h1>
+            <img src="src/images/thinker.jpg" style={imgStyle} class="img-rounded"/>
+            <div class="row">{projectComponents}</div>
+        </div>
     );
   }
 }
