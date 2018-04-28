@@ -14,7 +14,7 @@ class InvolvementStore extends EventEmitter {
         title: "President, the Fraternity of Phi Gamma Delta",
         setting: "WPI",
         date: "2017",
-        description: "Deciding to join Greek life was definitely one of the best decisions I made in my first year of college. I've become extremely passionate about alumni relations after seeing how one organization can transcend and connect multiple generations. In the past two years, I've held three positions within our fraternity: webmaster, awards chair, executive recording secretary, and president."
+        description: "Deciding to join Greek life was definitely one of the best decisions I made in my first year of college. I've become extremely passionate about alumni relations after seeing how one organization can transcend and connect multiple generations. In the past two years, I've held four positions within our fraternity: webmaster, awards chair, executive recording secretary, and president."
       },
       {
         title: "Trustee Mentor Program",
