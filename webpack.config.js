@@ -1,4 +1,5 @@
 var path = require('path');
+var WriteFilePlugin = require('write-file-webpack-plugin');
 module.exports = {
   entry: './src/client.js',
   output: {
@@ -19,7 +20,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-0'],
-          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy', new WriteFilePlugin()],
         }
       }
     ]
